@@ -1,7 +1,30 @@
 body {
   font-family: sans-serif;
   color: #666;
+
   background-color: #f1f1f1;
   font-size: x-large;
   margin: 1em;
+}
+
+.a {
+  display: flex;
+  padding: 10px;
+  background-color: #999;
+  color: #f1f1f1;
+  margin: 10px;
+  overflow-x: scroll;
+  border-radius: 5px;
+  flex-direction: row;
+}
+
+section.aa{
+  background-color: #BBB;
+  color: #666;
+  padding: 10px;
+  min-width: 20vw;
+  max-width: 30vw;
+  min-height: 200px;
+  margin: 10px;
+  border-radius: 5px;
 }

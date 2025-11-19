@@ -1,1 +1,16 @@
 
+form action="/add" method="post"
+    input type="text" placeholder="Vad ska du inte göra?" name="name"
+    input type="text" placeholder="Vad ska du inte göra, fast i mer detalj?" name="description"
+    input type="submit" value="Lägg till sak att prokrastinera på."
+
+h2 To Do
+section class="a"
+    - @postit.each do |x|
+        section class="aa"
+            h4 = x["name"]
+            p = x["description"]
+            form action="/edit/#{x['id']}" method="get"
+                input type="submit" value="Fix my mistakes!"
+            form action="/delete/#{x['id']}" method="post"
+                input type="submit" value="Prokrastinera permanent."

@@ -1,0 +1,6 @@
+h2 Ändra ditt fucky wucky!
+
+form action="/edit/#{@postitnote['id']}" method="post"
+    input type="text" placeholder=@postitnote["name"] name="name"
+    input type="text" placeholder=@postitnote["description"] name="description"
+    input type="submit" value="Fixa dina mmiissttaagg!"
