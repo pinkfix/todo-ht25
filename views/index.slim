@@ -2,6 +2,13 @@
 form action="/add" method="post"
     input type="text" placeholder="Vad ska du inte göra?" name="name"
     input type="text" placeholder="Vad ska du inte göra, fast i mer detalj?" name="description"
+    select name="kat"
+        option value="" selected="selected" Välj Kategori!
+        option value="Inköp" Inköp
+        option value="Jul" Jul
+        option value="Skola" Skola
+        option value="Vänner" Vänner
+        option value="Pengar" Pengar
     input type="submit" value="Lägg till sak att prokrastinera på."
 
 h2 To Do
@@ -21,7 +28,7 @@ section class="a"
 h2 Done
 section class="a"
     - @postitdone.each do |x|
-        section class="ab"
+        section class="aa"
             h4 = x["name"]
             p = x["description"]
             form action="/edit/#{x['id']}" method="get"
