@@ -17,6 +17,7 @@ section class="a"
         section class="aa"
             h4 = x["name"]
             p = x["description"]
+            p = x["category"]
             form action="/edit/#{x['id']}" method="get"
                 input type="submit" value="Fix my mistakes!"
             form action="/delete/#{x['id']}" method="post"

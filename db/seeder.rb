@@ -28,9 +28,9 @@ def create_tables(db)
 end
 
 def populate_tables(db)
-  db.execute('INSERT INTO todos (name, description, category, done) VALUES ("Köp mjölk", "3 liter mellanmjölk, eko", "", false)')
-  db.execute('INSERT INTO todos (name, description, category, done) VALUES ("Köp julgran", "En rödgran", "", false)')
-  db.execute('INSERT INTO todos (name, description, category, done) VALUES ("Pynta gran", "Glöm inte lamporna i granen och tomten", "", true)')
+  db.execute('INSERT INTO todos (name, description, category, done) VALUES ("Köp mjölk", "3 liter mellanmjölk, eko", "N/A", false)')
+  db.execute('INSERT INTO todos (name, description, category, done) VALUES ("Köp julgran", "En rödgran", "N/A", false)')
+  db.execute('INSERT INTO todos (name, description, category, done) VALUES ("Pynta gran", "Glöm inte lamporna i granen och tomten", "N/A", true)')
 end
 
 seed!(db)
