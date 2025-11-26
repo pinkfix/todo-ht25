@@ -11,7 +11,9 @@ get('/') do
     db = SQLite3::Database.new('db/todos.db') # Öppnar datanas
     db.results_as_hash = true #Begär hash
 
-    @postit = db.execute("SELECT * FROM todos") # Tar ut datan, förvarar i @animals
+    @postit = db.execute("SELECT * FROM todos WHERE done = false")
+    @postitdone = db.execute("SELECT * FROM todos WHERE done = true")
+
 
     slim(:index)
 end
@@ -57,5 +59,14 @@ post('/delete/:id') do
   db.results_as_hash = true #Begär hash
 
   db.execute("DELETE FROM todos WHERE id = ?", id)
+  redirect('/')
+end
+
+post('/doneify/:id') do
+  id = params[:id]
+  db = SQLite3::Database.new('db/todos.db') # Öppnar datanas
+  db.results_as_hash = true #Begär hash
+
+  db.execute("UPDATE todos SET done = true WHERE id = ?", id)
   redirect('/')
 end
