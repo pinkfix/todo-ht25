@@ -3,37 +3,37 @@ h2 Ändra ditt fucky wucky!
 form action="/edit/#{@postitnote['id']}" method="post"
     input type="text" placeholder=@postitnote["name"] value=@postitnote["name"] name="name"
     input type="text" placeholder=@postitnote["description"] value=@postitnote["description"] name="description"
-    - if @postitnote["category"] == "Inköp"
+    - if @postitnote["category"] == "Varje vecka"
         select name="kat"
-            option value="Inköp" selected="selected" Inköp
+            option value="Varje vecka" selected="selected" Varje vecka
             option value="Jul" Jul
             option value="Skola" Skola
             option value="Vänner" Vänner
             option value="Pengar" Pengar
     - elsif @postitnote["category"] == "Jul"
         select name="kat"
-            option value="Inköp" Inköp
+            option value="Varje vecka" Varje vecka
             option value="Jul" selected="selected" Jul
             option value="Skola" Skola
             option value="Vänner" Vänner
             option value="Pengar" Pengar
     - elsif @postitnote["category"] == "Skola"
         select name="kat"
-            option value="Inköp" Inköp
+            option value="Varje vecka" Varje vecka
             option value="Jul" Jul
             option value="Skola" selected="selected" Skola
             option value="Vänner" Vänner
             option value="Pengar" Pengar 
     - elsif @postitnote["category"] == "Vänner"
         select name="kat"
-            option value="Inköp" Inköp
+            option value="Varje vecka" Varje vecka
             option value="Jul" Jul
             option value="Skola" Skola
             option value="Vänner" selected="selected" Vänner
             option value="Pengar" Pengar
     - elsif @postitnote["category"] == "Pengar"
         select name="kat"
-            option value="Inköp" Inköp
+            option value="Varje vecka" Varje vecka
             option value="Jul" Jul
             option value="Skola" Skola
             option value="Vänner" Vänner

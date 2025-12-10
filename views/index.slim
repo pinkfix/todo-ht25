@@ -4,7 +4,7 @@ form action="/add" method="post"
     input type="text" placeholder="Beskrivning" name="description"
     select name="kat"
         option value="" selected="selected" Välj Kategori!
-        option value="Inköp" Inköp
+        option value="Varje vecka" Varje vecka
         option value="Jul" Jul
         option value="Skola" Skola
         option value="Vänner" Vänner
@@ -20,7 +20,7 @@ section class="a"
             p Kategori:
             b
                 i
-                    p = x["category"]
+                    p = x["cat"]
             form action="/edit/#{x['id']}" method="get"
                 input type="submit" value="Edit"
             form action="/delete/#{x['id']}" method="post"
@@ -35,9 +35,10 @@ section class="a"
         section class="aa"
             h4 = x["name"]
             p = x["description"]
-            p Kategorier:
-            - @cats[x["id"]-1][1].each do |y|
-                p = y["cat_id"]
+            p Kategori:
+            b
+                i
+                    p = x["cat"]
             form action="/edit/#{x['id']}" method="get"
                 input type="submit" value="Edit"
             form action="/delete/#{x['id']}" method="post"
